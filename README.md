@@ -1,8 +1,8 @@
 # Chrome Extension for bypass.vip
-Displays the actual link for ad linkers, urls shorteners etc.
+Shields you from the internet dirt and displays the actual link for ad linkers, urls shorteners etc.
 
 ## How it works
-Uses ``bypass.vip`` API with the following URL's
+Displays a message with the actual destination link. The extention uses the ``bypass.vip`` API for the following URL's
 
 - linkvertise.com
 - exe.io
@@ -24,3 +24,6 @@ Uses ``bypass.vip`` API with the following URL's
 - tinyurl.com
 
 See https://github.com/bypass-vip/bypass.vip
+
+## Thanks to
+tulpahn at Flaticon https://www.flaticon.com/ 
