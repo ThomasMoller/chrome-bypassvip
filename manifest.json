@@ -46,7 +46,7 @@
   },
 
   "web_accessible_resources": [{
-      "resources": ["popdown.html"],
+      "resources": ["popdown.html","images/icon-48.png"],
       "matches": ["<all_urls>"]
   }]
 }

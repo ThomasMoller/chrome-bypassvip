@@ -5,14 +5,16 @@
         top: 0;
         left: 0;
         right: 0;
-        background: #fde073;
+        background: #404040;
         text-align: center;
-        line-height: 2.5;
         overflow: hidden; 
         -webkit-box-shadow: 0 0 5px black;
         box-shadow:         0 0 5px black;
+        padding: 5px;
+        color: #7BACE6;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     }
-
+   
     #bypassvipmessageclose {
         position: absolute;
         right: 10px;
@@ -22,7 +24,106 @@
         width: 16px;
         cursor: pointer;
     }
+
+    .bypassvip-flex-container {
+        display: flex;
+    }
+
+    .bypassvip-flex-child {
+        flex: 1;
+    }
+
+    #bypassvip-icon {
+        flex-basis: 53px;
+        flex-grow: 0;
+        flex-shrink: 0;
+        text-align: right;
+        margin-right: 10px;
+    } 
+
+    .bypassvip-right {
+        text-align: left;
+        margin-top: auto;
+        white-space: nowrap;
+    }
+
+    #bypassvip-close {
+        flex-basis: 20px;
+        flex-grow: 0;
+        flex-shrink: 0;
+    }
+
+    #bypassvip-close a,
+    #bypassvip-close a:visited,
+    #bypassvip-close a:active {
+        color: #7BACE6;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    #bypassviplink a, 
+    #bypassviplink a:visited, 
+    #bypassviplink a:active {
+        color: #7BACE6;
+    }
+
+    .bypassvip-slide-down {
+        -webkit-animation-name: bypassvip-slide-down;	
+        -webkit-animation-duration: .5s;
+        -webkit-animation-timing-function: ease;	
+        visibility: visible !important;						
+    }
+
+    @-webkit-keyframes bypassvip-slide-down {
+        0% {
+            -webkit-transform: translateY(-100%);
+        }
+        50%{
+            -webkit-transform: translateY(8%);
+        }
+        65%{
+            -webkit-transform: translateY(-4%);
+        }
+        80%{
+            -webkit-transform: translateY(4%);
+        }
+        95%{
+            -webkit-transform: translateY(-2%);
+        }			
+        100% {
+            -webkit-transform: translateY(0%);
+        }	
+    }
+
+    .bypassvip-slide-up {
+        -webkit-animation-name: bypassvip-slide-up;	
+        -webkit-animation-duration: .5s;
+        -webkit-animation-timing-function: ease;	
+    }
+
+    @-webkit-keyframes bypassvip-slide-up {
+        0% {
+            -webkit-transform: translateY(0%);
+            
+        }
+        100% {
+            -webkit-transform: translateY(-100%);
+        }
+    }
 </style>
+
 <div id="bypassvipmessage">
-    <span id="bypassvipmessagespan">labaerbadaber</span> <a id="bypassvipmessageclose">[close]</a>
+    <div class="bypassvip-flex-container">
+        <div class="bypassvip-flex-child"></div>
+        <div class="bypassvip-flex-child" id="bypassvip-icon">
+            <img id="bypassvip-image" src="images/icon-48.png">
+        </div>
+        
+        <div class="bypassvip-flex-child bypassvip-right">
+            <small>Destination link:</small><br>
+            <span id="bypassviplink"></span>
+        </div>
+        <div class="bypassvip-flex-child" id="bypassvip-close"><a>[x]</a></div>
+        <div class="bypassvip-flex-child"></div>
+    </div>
 </div>
